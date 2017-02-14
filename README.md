@@ -6,3 +6,5 @@ If you are using sbt as your build tool, you can install the SuperSafe Community
 
 resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
 
+otherwise the project will not assemble. 
+
