@@ -88,7 +88,7 @@ class Worker extends Actor {
         // if everything is ok, we now need to check if we broke something if me made changes
       }
     }
-    // now assign values to resulting
+    // now assign values to resulting array
     for (kv <- mattes) {
       result(kv._1) = 1
     }
@@ -97,7 +97,7 @@ class Worker extends Actor {
   }
 
 
-
+  // the same as above except that we don't track matte separately, we just check the batch directly
   def processCase(customers: List[List[Int]], numPaints: Int): Array[Int] = {
     val result = Array.fill(numPaints)(0)
     var next = true
@@ -139,7 +139,7 @@ class Worker extends Actor {
         // if everything is ok, we now need to check if we broke something if me made changes
       }
     }
-    // this satisfies everybody, return
+    // this satisfies everybody, return result
     return result
   }
 }
